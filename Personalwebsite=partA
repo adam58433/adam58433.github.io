@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name | Professor of Philosophy</title> <!-- 修改：你的名字 -->
+    <link rel="stylesheet" href="style.css">
+    <!-- 引入类似原网站的衬线字体 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- 左侧固定侧边栏 -->
+    <aside class="sidebar">
+        <div class="sidebar-content">
+            <h1 class="site-title"><a href="#home">Your Name</a></h1> <!-- 修改：你的名字 -->
+            <p class="site-subtitle">Professor of Philosophy<br>University Name</p> <!-- 修改：你的头衔 -->
+
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#books">Books</a></li>
+                    <li><a href="#papers">Papers</a></li>
+                    <li><a href="#cv">Curriculum Vitae</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="sidebar-footer">
+                <p>&copy; 2026 Your Name</p>
+            </div>
+        </div>
+    </aside>
+
+    <!-- 右侧主要内容区 -->
+    <main class="main-content">
+        
+        <!-- 首页封面图区域 (如果不想要图片，可以删除 img 标签) -->
+        <section id="home" class="section home-section">
+            <div class="hero-image-placeholder">
+                <!-- 这里原本是放大幅照片的地方，你可以放风景照或者留白 -->
+                <p style="text-align:center; color:#999; padding: 100px 0;">[Home Image Placeholder]</p>
+            </div>
+        </section>
+
+        <!-- About 区域 -->
+        <section id="about" class="section">
+            <h2>About</h2>
+            <p>这里是你的个人简介。Tim Maudlin 的网站风格非常依赖字体的排版。</p>
+            <p>在此处输入你的学术背景、研究兴趣等。你可以直接复制原本的文本结构。</p>
+        </section>
+
+        <!-- Books 区域 -->
+        <section id="books" class="section">
+            <h2>Books</h2>
+            <div class="book-item">
+                <h3>Book Title One (2024)</h3>
+                <p>Publisher Name. Description of the book goes here.</p>
+            </div>
+            <div class="book-item">
+                <h3>Book Title Two (2020)</h3>
+                <p>Publisher Name. Another description.</p>
+            </div>
+        </section>
+
+        <!-- Papers 区域 -->
+        <section id="papers" class="section">
+            <h2>Papers</h2>
+            <ul class="paper-list">
+                <li><a href="#">"Title of the Paper"</a>, <i>Journal Name</i>, 2023.</li>
+                <li><a href="#">"Another Academic Paper"</a>, <i>Philosophical Review</i>, 2021.</li>
+            </ul>
+        </section>
+
+        <!-- CV 区域 -->
+        <section id="cv" class="section">
+            <h2>Curriculum Vitae</h2>
+            <p>
+                <a href="#" class="btn">Download Full CV (PDF)</a>
+            </p>
+        </section>
+
+        <!-- Contact 区域 -->
+        <section id="contact" class="section">
+            <h2>Contact</h2>
+            <p><strong>Email:</strong> your.email@university.edu</p>
+            <p><strong>Address:</strong><br>Department of Philosophy<br>123 University Ave<br>City, State, Zip</p>
+        </section>
+
+    </main>
+
+</body>
+</html>
