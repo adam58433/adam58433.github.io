@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tim Maudlin | Philosopher of Physics</title>
+    <style>
+        /* --- 核心风格复刻 (Base Styles) --- */
+        :root {
+            --primary-font: "Georgia", "Times New Roman", serif;
+            --header-font: "Helvetica Neue", "Arial", sans-serif;
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --accent-color: #555555; /* 经典的学术灰/黑色 */
+            --nav-bg: #ffffff;
+            --link-color: #000000;
+            --link-hover: #666666;
+        }
+
+        body {
+            font-family: var(--primary-font);
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--link-color);
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--link-hover);
+        }
+
+        /* --- 导航栏 (Navigation) --- */
+        header {
+            padding: 20px 0;
+            text-align: center;
+            border-bottom: 1px solid #eeeeee;
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.95);
+            z-index: 1000;
+        }
+
+        .site-title {
+            font-family: var(--header-font);
+            font-size: 2.5rem;
+            font-weight: 300; /* 细体，现代学术风格 */
+            margin: 0;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .site-subtitle {
+            font-family: var(--header-font);
+            font-size: 0.9rem;
+            color: #777;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0 0 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav li {
+            margin: 0 15px;
+        }
+
+        nav a {
+            font-family: var(--header-font);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 400;
+        }
+
+        /* --- 通用部分样式 (Section Styles) --- */
+        section {
+            padding: 60px 20px;
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-family: var(--header-font);
+            text-align: center;
+            font-size: 1.8rem;
+            margin-bottom: 40px;
+            font-weight: 300;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #222;
+        }
+
+        /* --- I. Home Section --- */
+        #home {
+            text-align: center;
+            padding-top: 80px;
+        }
+
+        .hero-text {
+            font-size: 1.4rem;
+            font-weight: normal;
+            margin-bottom: 10px;
+        }
+        
+        .hero-subtext {
+            font-size: 1.1rem;
+            font-style: italic;
+            color: #555;
+        }
+
+        /* --- II. About Tim Section (MODIFIED) --- */
+        /* 根据要求，此处保留了结构，但内容已替换 */
+        #about {
+            background-color: #fafafa; /* 轻微区分背景色 */
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+        }
+
+        .about-container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        /* 这是您需要替换图片的地方 */
+        .about-portrait-placeholder {
+            width: 300px;
+            height: 300px;
+            background-color: #e0e0e0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #888;
+            font-family: var(--header-font);
+            border: 1px dashed #aaa;
+        }
+
+        .about-text-placeholder {
+            flex: 1;
+            min-width: 300px;
+            padding: 20px;
+            background: #fff;
+            border: 1px dashed #ccc;
+        }
+
+        /* --- III. Publications Section --- */
+        .books-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .book-item {
+            text-align: center;
+        }
+
+        .book-cover {
+            width: 100%;
+            max-width: 180px;
+            height: 270px;
+            background-color: #333; /* 模拟书籍封面占位 */
+            margin: 0 auto 15px auto;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 0.8rem;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .book-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+            font-size: 1rem;
+        }
+
+        .book-meta {
+            font-size: 0.9rem;
+            color: #666;
+            font-style: italic;
+        }
+
+        /* --- Footer --- */
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            background-color: #f9f9f9;
+            font-size: 0.8rem;
+            color: #777;
+            font-family: var(--header-font);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 头部与导航 (Header & Navigation) -->
+    <header>
+        <h1 class="site-title">Tim Maudlin</h1>
+        <div class="site-subtitle">Philosophy of Physics | Metaphysics | Logic</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Tim</a></li>
+                <li><a href="#publications-i">Publications I</a></li>
+                <li><a href="#publications-ii">Publications II</a></li>
+                <li><a href="#media">Media</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 第一部分：首页 (Part I: Home) -->
+    <section id="home">
+        <div class="hero-text">Founder and Director, John Bell Institute for the Foundations of Physics</div>
+        <div class="hero-text">Professor of Philosophy, New York University</div>
+        <br>
+        <p class="hero-subtext">Specializing in the foundations of physics, metaphysics, and logic.</p>
+    </section>
+
+    <!-- 第二部分：关于 (Part II: About Tim) -->
+    <!-- 说明：已根据要求移除原有的肖像和文字，保留了布局结构供您填入新内容 -->
+    <section id="about">
+        <h2 class="section-title">About Tim</h2>
+        <div class="about-container">
+            <!-- 请在此处替换新的个人头像 -->
+            <div class="about-portrait-placeholder">
+                [Insert New Portrait Here]
+                <br> Recommended Size: 300x300px
+            </div>
+            
+            <!-- 请在此处替换新的个人简介 -->
+            <div class="about-text-placeholder">
+                <h3>[Insert New Biography Title]</h3>
+                <p>
+                    [在此处输入新的个人简介文字。保留了原本的排版风格：左侧（或上方）为图片，右侧（或下方）为文字描述。]
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 第三部分：出版物 (Part III: Publications I) -->
+    <!-- 保留了原网站的书籍展示风格 -->
+    <section id="publications-i">
+        <h2 class="section-title">Selected Books</h2>
+        <div class="books-grid">
+            <div class="book-item">
+                <!-- 原书: Quantum Non-Locality and Relativity -->
+                <div class="book-cover" style="background-color: #2c3e50;">Quantum Non-Locality<br>& Relativity</div>
+                <div class="book-title">Quantum Non-Locality and Relativity</div>
+                <div class="book-meta">Blackwell, 3rd Edition</div>
+            </div>
+            <div class="book-item">
+                <!-- 原书: Truth and Paradox -->
+                <div class="book-cover" style="background-color: #c0392b;">Truth and Paradox</div>
+                <div class="book-title">Truth and Paradox</div>
+                <div class="book-meta">Oxford University Press</div>
+            </div>
+            <div class="book-item">
+                <!-- 原书: The Metaphysics Within Physics -->
+                <div class="book-cover" style="background-color: #27ae60;">The Metaphysics<br>Within Physics</div>
+                <div class="book-title">The Metaphysics Within Physics</div>
+                <div class="book-meta">Oxford University Press</div>
+            </div>
+            <div class="book-item">
+                <!-- 原书: Philosophy of Physics -->
+                <div class="book-cover" style="background-color: #f39c12; color: #333;">Philosophy of Physics:<br>Space and Time</div>
+                <div class="book-title">Philosophy of Physics</div>
+                <div class="book-meta">Princeton University Press</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系方式 (Contact) -->
+    <section id="contact" style="text-align: center; margin-bottom: 40px;">
+        <h2 class="section-title">Contact</h2>
+        <p>John Bell Institute for the Foundations of Physics</p>
+        <p>New York University, Department of Philosophy</p>
+        <br>
+        <a href="mailto:TimMaudlin@JohnBellinstitute.org" style="font-size: 1.1rem; border-bottom: 1px solid #000;">TimMaudlin@JohnBellinstitute.org</a>
+    </section>
+
+    <footer>
+        &copy; 2026 Tim Maudlin. All Rights Reserved. <br>
+        Recreated Structure.
+    </footer>
+
+</body>
+</html>
