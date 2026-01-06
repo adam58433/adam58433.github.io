@@ -1,0 +1,176 @@
+/* 全局设置：重置与字体 */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* 核心风格：使用 Crimson Text 或 Times New Roman 等衬线字体 */
+    font-family: 'Crimson Text', 'Times New Roman', serif;
+    background-color: #ffffff;
+    color: #1a1a1a;
+    line-height: 1.6;
+    font-size: 18px;
+    display: flex; /* 左右布局的核心 */
+    min-height: 100vh;
+}
+
+/* 链接样式 */
+a {
+    color: #1a1a1a;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: #666; /* 悬停变灰，经典的学术极简风 */
+    text-decoration: underline;
+}
+
+/* --- 左侧侧边栏 (Sidebar) --- */
+.sidebar {
+    width: 260px; /* 固定宽度 */
+    height: 100vh;
+    position: fixed; /* 固定在左侧 */
+    left: 0;
+    top: 0;
+    background-color: #fcfcfc; /* 极淡的灰色背景，或者改为 #fff 纯白 */
+    border-right: 1px solid #eee; /* 右侧有一条极细的分界线 */
+    padding: 60px 30px;
+    overflow-y: auto;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+}
+
+.site-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.site-subtitle {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 50px;
+    font-style: italic;
+    line-height: 1.4;
+}
+
+.nav-list {
+    list-style: none;
+}
+
+.nav-list li {
+    margin-bottom: 15px;
+}
+
+.nav-list a {
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #333;
+}
+
+.sidebar-footer {
+    margin-top: auto; /* 推到底部 */
+    font-size: 12px;
+    color: #999;
+}
+
+/* --- 右侧内容区 (Main Content) --- */
+.main-content {
+    margin-left: 260px; /* 必须与 sidebar 宽度一致 */
+    flex: 1;
+    padding: 60px 80px;
+    max-width: 1000px; /* 限制内容最大宽度，防止阅读体验太差 */
+}
+
+/* 章节通用样式 */
+.section {
+    margin-bottom: 80px;
+    padding-top: 20px; /* 给锚点跳转留一点空间 */
+}
+
+h2 {
+    font-size: 28px;
+    font-weight: 400;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+/* 书籍列表样式 */
+.book-item {
+    margin-bottom: 30px;
+}
+
+/* 论文列表样式 */
+.paper-list {
+    list-style: disc; /* 如果想要纯圆点 */
+    padding-left: 20px;
+}
+
+.paper-list li {
+    margin-bottom: 10px;
+}
+
+/* 简单的按钮样式 */
+.btn {
+    display: inline-block;
+    border: 1px solid #333;
+    padding: 10px 20px;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn:hover {
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* --- 移动端响应式设计 (手机上侧边栏变顶部) --- */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding: 30px 20px;
+        border-right: none;
+        border-bottom: 1px solid #eee;
+        text-align: center;
+    }
+
+    .sidebar-footer {
+        display: none;
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding: 40px 20px;
+    }
+    
+    .site-subtitle {
+        margin-bottom: 20px;
+    }
+}
